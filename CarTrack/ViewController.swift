@@ -11,7 +11,7 @@ class ViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        print("view did load method called")
+        print("method changed")
         // Do any additional setup after loading the view.
     }
 
