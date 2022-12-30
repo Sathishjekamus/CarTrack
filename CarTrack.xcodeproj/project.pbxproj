@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		0954D21C295EB8A800BE853B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954D21B295EB8A800BE853B /* AppDelegate.swift */; };
-		0954D21E295EB8A800BE853B /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954D21D295EB8A800BE853B /* SceneDelegate.swift */; };
 		0954D220295EB8A800BE853B /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954D21F295EB8A800BE853B /* ViewController.swift */; };
 		0954D223295EB8A800BE853B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0954D221295EB8A800BE853B /* Main.storyboard */; };
 		0954D225295EB8AB00BE853B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0954D224295EB8AB00BE853B /* Assets.xcassets */; };
@@ -38,7 +37,6 @@
 /* Begin PBXFileReference section */
 		0954D218295EB8A800BE853B /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0954D21B295EB8A800BE853B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		0954D21D295EB8A800BE853B /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		0954D21F295EB8A800BE853B /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		0954D222295EB8A800BE853B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		0954D224295EB8AB00BE853B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -100,7 +98,6 @@
 			isa = PBXGroup;
 			children = (
 				0954D21B295EB8A800BE853B /* AppDelegate.swift */,
-				0954D21D295EB8A800BE853B /* SceneDelegate.swift */,
 				0954D21F295EB8A800BE853B /* ViewController.swift */,
 				0954D221295EB8A800BE853B /* Main.storyboard */,
 				0954D224295EB8AB00BE853B /* Assets.xcassets */,
@@ -260,7 +257,6 @@
 			files = (
 				0954D220295EB8A800BE853B /* ViewController.swift in Sources */,
 				0954D21C295EB8A800BE853B /* AppDelegate.swift in Sources */,
-				0954D21E295EB8A800BE853B /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -444,6 +440,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -451,6 +448,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Helix.CarTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -471,6 +471,7 @@
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -478,6 +479,9 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.Helix.CarTrack;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
