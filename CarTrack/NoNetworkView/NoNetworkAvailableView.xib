@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14868" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14824"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NoNetworkAvailableView" customModule="HelloParentAdmin" customModuleProvider="target">
+            <connections>
+                <outlet property="backgroundView" destination="x0z-TN-7dW" id="C0C-Jc-uK2"/>
+                <outlet property="contentView" destination="iN0-l3-epB" id="BJd-iy-oAN"/>
+                <outlet property="noNetworkLabel" destination="gQz-ke-QOL" id="Q7y-As-Agf"/>
+                <outlet property="retryBtn" destination="w3M-s6-Erk" id="1uC-0Y-kTP"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="x0z-TN-7dW">
+                    <rect key="frame" x="22.5" y="388" width="369" height="130"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Please check your internet connection and try again." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="gQz-ke-QOL">
+                            <rect key="frame" x="20" y="20" width="329" height="40"/>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <color key="textColor" red="0.33333334329999997" green="0.33333334329999997" blue="0.33333334329999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="w3M-s6-Erk" customClass="HPPrimaryBtn" customModule="HelloParentAdmin" customModuleProvider="target">
+                            <rect key="frame" x="279" y="80" width="70" height="40"/>
+                            <color key="backgroundColor" red="0.20784313730000001" green="0.58431372550000005" blue="0.85098039219999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="70" id="YBb-xj-XHu"/>
+                                <constraint firstAttribute="height" constant="40" id="dDN-rW-Q5X"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="HelveticaNeue" family="Helvetica Neue" pointSize="17"/>
+                            <state key="normal" title="RETRY">
+                                <color key="titleColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                            <userDefinedRuntimeAttributes>
+                                <userDefinedRuntimeAttribute type="string" keyPath="titleText" value="RETRY"/>
+                            </userDefinedRuntimeAttributes>
+                            <connections>
+                                <action selector="retryOnClickWithSender:" destination="-1" eventType="touchUpInside" id="caX-DY-odP"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="gQz-ke-QOL" secondAttribute="trailing" constant="20" id="S4x-eM-UHi"/>
+                        <constraint firstItem="w3M-s6-Erk" firstAttribute="top" secondItem="gQz-ke-QOL" secondAttribute="bottom" constant="20" id="Xrj-ja-D7G"/>
+                        <constraint firstItem="gQz-ke-QOL" firstAttribute="leading" secondItem="x0z-TN-7dW" secondAttribute="leading" constant="20" id="Zn5-l3-TJI"/>
+                        <constraint firstAttribute="trailing" secondItem="w3M-s6-Erk" secondAttribute="trailing" constant="20" id="cPn-fx-3Ft"/>
+                        <constraint firstAttribute="bottom" secondItem="w3M-s6-Erk" secondAttribute="bottom" constant="10" id="hHg-k9-Owa"/>
+                        <constraint firstItem="gQz-ke-QOL" firstAttribute="top" secondItem="x0z-TN-7dW" secondAttribute="top" constant="20" id="rOu-pX-2Zz"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="x0z-TN-7dW" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vUN-kp-3ea" secondAttribute="leading" constant="20" id="NMM-40-w8I"/>
+                <constraint firstItem="x0z-TN-7dW" firstAttribute="centerY" secondItem="vUN-kp-3ea" secondAttribute="centerY" id="Tfa-xh-LhM"/>
+                <constraint firstItem="x0z-TN-7dW" firstAttribute="centerX" secondItem="vUN-kp-3ea" secondAttribute="centerX" id="vyR-lP-GEm"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="vUN-kp-3ea"/>
+            <point key="canvasLocation" x="137.68115942028987" y="128.57142857142856"/>
+        </view>
+    </objects>
+</document>

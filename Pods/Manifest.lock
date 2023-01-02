@@ -1,0 +1,28 @@
+PODS:
+  - Alamofire (4.9.1)
+  - FontAwesome.swift (1.9.1)
+  - ObjectMapper (4.2.0)
+  - Toaster (2.3.0)
+
+DEPENDENCIES:
+  - Alamofire
+  - FontAwesome.swift
+  - ObjectMapper
+  - Toaster
+
+SPEC REPOS:
+  trunk:
+    - Alamofire
+    - FontAwesome.swift
+    - ObjectMapper
+    - Toaster
+
+SPEC CHECKSUMS:
+  Alamofire: 85e8a02c69d6020a0d734f6054870d7ecb75cf18
+  FontAwesome.swift: 6b52cb7be66eacd28cbfaa0ca7ffd0de4a186a1d
+  ObjectMapper: 1eb41f610210777375fa806bf161dc39fb832b81
+  Toaster: c3473963c78e8cabbf6ea6f11ad0fdaae6f54987
+
+PODFILE CHECKSUM: 48c77cc446bbc8b83d05b3341e38ca27e3b9953a
+
+COCOAPODS: 1.11.3
