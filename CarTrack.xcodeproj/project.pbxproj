@@ -27,6 +27,7 @@
 		096A0C702962DEE4005FA079 /* UITextFieldExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C6F2962DEE3005FA079 /* UITextFieldExtension.swift */; };
 		096A0C722962E49D005FA079 /* CTSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C712962E49D005FA079 /* CTSingleton.swift */; };
 		096A0C742962EBD8005FA079 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C732962EBD7005FA079 /* ButtonExtension.swift */; };
+		096A0C762962F64F005FA079 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C752962F64F005FA079 /* UIApplication.swift */; };
 		09E54D5C29601C4100DD5637 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2129601C4100DD5637 /* ParameterEncoding.swift */; };
 		09E54D5D29601C4100DD5637 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */; };
 		09E54D5E29601C4100DD5637 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2329601C4100DD5637 /* JSONParameterEncoder.swift */; };
@@ -87,6 +88,7 @@
 		096A0C6F2962DEE3005FA079 /* UITextFieldExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtension.swift; sourceTree = "<group>"; };
 		096A0C712962E49D005FA079 /* CTSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTSingleton.swift; sourceTree = "<group>"; };
 		096A0C732962EBD7005FA079 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
+		096A0C752962F64F005FA079 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
 		09E54D2129601C4100DD5637 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		09E54D2329601C4100DD5637 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -233,6 +235,7 @@
 			isa = PBXGroup;
 			children = (
 				096A0C6C2962D081005FA079 /* String.swift */,
+				096A0C752962F64F005FA079 /* UIApplication.swift */,
 				096A0C732962EBD7005FA079 /* ButtonExtension.swift */,
 				096A0C6F2962DEE3005FA079 /* UITextFieldExtension.swift */,
 				096A0C6A2962C4E6005FA079 /* UIView+Extension.swift */,
@@ -580,6 +583,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				096A0C762962F64F005FA079 /* UIApplication.swift in Sources */,
 				096A0C662962B634005FA079 /* CTAPIEndPoint.swift in Sources */,
 				09E54D5D29601C4100DD5637 /* URLParameterEncoding.swift in Sources */,
 				09E54D7A29601C4100DD5637 /* EndPointType.swift in Sources */,
@@ -710,7 +714,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -764,7 +768,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

@@ -8,8 +8,10 @@ target 'CarTrack' do
   # Pods for CarTrack
  pod 'ObjectMapper'
  pod 'Alamofire'
- pod 'Toaster'
+ pod 'Toast-Swift'
  pod 'FontAwesome.swift'
+ pod 'ReachabilitySwift'
+ pod 'CountryPickerView'
  
   target 'CarTrackTests' do
     inherit! :search_paths

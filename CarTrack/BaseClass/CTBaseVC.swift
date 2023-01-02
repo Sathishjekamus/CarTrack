@@ -6,7 +6,7 @@
 //
 
 import UIKit
-import Toaster
+import Toast_Swift
 
 class CTBaseVC: UIViewController, CTBaseVCProtocol {
         
@@ -106,7 +106,14 @@ class CTBaseVC: UIViewController, CTBaseVCProtocol {
             self.present(alertController, animated: true, completion: nil);
           }
         
-        func makeToastWithMessage(with msg:String, color:UIColor? = .blue){}
+        func makeToastWithMessage(with msg:String, color:UIColor? = .darkGray){
+            OperationQueue.main.addOperation {
+                var style = ToastStyle()
+                style.backgroundColor = color!
+                style.messageColor = UIColor.white
+                UIApplication.topViewController()?.view.makeToast(msg, duration: 3.0, position: .bottom, style: style)
+            }
+        }
         
         func hideLoadingOverlay() {}
          
