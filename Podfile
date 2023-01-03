@@ -12,7 +12,10 @@ target 'CarTrack' do
  pod 'FontAwesome.swift'
  pod 'ReachabilitySwift'
  pod 'CountryPickerView'
- 
+ pod 'Firebase/Core'
+ pod 'Firebase/Auth'
+ pod 'FBSDKLoginKit'
+
   target 'CarTrackTests' do
     inherit! :search_paths
     # Pods for testing

@@ -9,11 +9,14 @@ import UIKit
 import FontAwesome_swift
 import Reachability
 import MessageUI
+import CountryPickerView
+import FirebaseCore
+import FirebaseAuth
 
 protocol CTLoginViewDelegate {
     func didStartLoadingContent()
     func didEndLoading(withError error:String?)
-    func didEndLoadingContent(_ success:Bool?, _ error: String?)
+    func didAutherizedUser(_ user:User?, _ error: String?)
     
 }
 
@@ -28,7 +31,7 @@ class LoginVC: CTBaseVC {
     @IBOutlet weak var passwordMissingImgView: UIImageView!
     @IBOutlet weak var signInBtn: ButtonExtension!
     @IBOutlet weak var countryMissingImageView: UIImageView!
-    
+    @IBOutlet weak var countryPickerView: CountryPickerView!
     @IBOutlet weak var selectCountryTxtField: UITextField!
     
     var isPasswordVisible:Bool = false {
@@ -70,13 +73,17 @@ class LoginVC: CTBaseVC {
     }
     
     func navigatetoHomeScreen(){
-        let vc = self.storyboard?.instantiateViewController(withIdentifier: "")
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "CTUserListVC") as! CTUserListVC
+        self.navigationController?.pushViewController(vc, animated: true)
     }
-    
+
     override func initializeVariables(){
         self.isPasswordVisible = false
         self.isUserNameMissing = false
         self.isPasswordMissing = false
+        self.countryPickerView.delegate = self
+        self.countryPickerView.dataSource = self
+        self.countryPickerView.setCountryByCode("IN")
         self.vm = CTLoginVM(networkManager: NetworkManager(), delegate: self)
     }
     
@@ -122,10 +129,6 @@ class LoginVC: CTBaseVC {
             self.makeToastWithMessage(with: "Password should contains 6 characters length!")
             callBack?(false)
             
-        }else if  self.selectCountryTxtField.text == "" {
-            self.makeToastWithMessage(with: "Please select country!")
-            callBack?(false)
-            
         }else{
             callBack?(true)
         }
@@ -162,25 +165,24 @@ class LoginVC: CTBaseVC {
         self.makeToastWithMessage(with: "Username or password is incorrect!")
     }
     
-    func callingLoginAPI(){
-        
-    }
-    
 }
 
 extension LoginVC:CTLoginViewDelegate {
+  
+    
     func didStartLoadingContent() {
-        
+        self.didBeginLoading()
     }
     
     func didEndLoading(withError error: String?) {
-      
+        self.didFinishLoading()
+        self.makeToastWithMessage(with: error ?? "")
     }
     
-    func didEndLoadingContent(_ success: Bool?, _ error: String?) {
+    func didAutherizedUser(_ user:User?, _ error: String?) {
         OperationQueue.main.addOperation {
             self.didFinishLoading()
-            if success == true {
+            if ((error == nil) || (user != nil)) {
                 self.userNameTxtField.text = ""
                 self.passwordTxtField.text = ""
                 self.selectCountryTxtField.text = ""
@@ -197,5 +199,11 @@ extension LoginVC:CTLoginViewDelegate {
 extension LoginVC:MFMailComposeViewControllerDelegate {
     func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
         controller.dismiss(animated: true, completion: nil)
+    }
+}
+
+extension LoginVC:CountryPickerViewDelegate,CountryPickerViewDataSource {
+    func countryPickerView(_ countryPickerView: CountryPickerView, didSelectCountry country: Country) {
+       print(country)
     }
 }

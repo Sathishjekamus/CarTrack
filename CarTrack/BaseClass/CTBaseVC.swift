@@ -15,7 +15,8 @@ class CTBaseVC: UIViewController, CTBaseVCProtocol {
         var obj = ErrorObject()
         let picker = UIImagePickerController()
         var isRefreshEnabled = false
-        
+        var overlay: UIView?
+        var loaderImageView:UIImageView?
         
         lazy var refreshControl: UIRefreshControl = {
             let refreshControl = UIRefreshControl()
@@ -75,7 +76,6 @@ class CTBaseVC: UIViewController, CTBaseVCProtocol {
             OperationQueue.main.addOperation {
                 self.showLoadingOverlay()
                }
-              
            }
            
            public func didFinishLoading() {
@@ -115,9 +115,56 @@ class CTBaseVC: UIViewController, CTBaseVCProtocol {
             }
         }
         
-        func hideLoadingOverlay() {}
-         
-        func showLoadingOverlay(){}
+        func hideLoadingOverlay() {
+            OperationQueue.main.addOperation {
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.overlay?.alpha = 0
+                }, completion: { (success) in
+                    self.overlay?.removeFromSuperview()
+                })
+            }
+        }
+    
+    func initOverlay() {
+        overlay = UIView()
+        overlay?.backgroundColor =  UIColor.black.withAlphaComponent(0.7)
+
+      }
+    
+    func initLoaderImageView(){
+        self.activityIndicator = UIActivityIndicatorView(style: .whiteLarge)
+        self.activityIndicator?.color = .darkGray
+        self.activityIndicator?.startAnimating()
+    }
+    
+        func showLoadingOverlay(){
+            OperationQueue.main.addOperation {
+                if (self.overlay == nil) {
+                    self.initOverlay()
+                }
+                self.overlay?.alpha = 1
+                
+                if (self.loaderImageView == nil) {
+                    self.initLoaderImageView()
+                }
+               
+                self.view.addSubview(self.overlay!)
+                let loaderBackgroundView = UIView(frame: CGRect(x: 0, y: 0, width: 100, height: 100))
+               loaderBackgroundView.center = self.view.center
+               loaderBackgroundView.backgroundColor = UIColor.clear
+               loaderBackgroundView.makeCircle()
+               self.overlay?.addSubview(loaderBackgroundView)
+               self.activityIndicator?.center = self.view.center
+               self.overlay?.addSubview(self.activityIndicator!)
+               self.overlay?.frame = self.view.frame
+               self.overlay?.center = CGPoint(x: self.view.frame.size.width / 2, y: self.view.frame.size.height / 2)
+                
+                UIView.animate(withDuration: 0.2, animations: {
+                    self.overlay?.alpha = 1
+                })
+            }
+
+        }
         
         func showLoadMoreActivityIndicator() -> UIActivityIndicatorView{
             let spinner = UIActivityIndicatorView(frame: CGRect(x: CGFloat(0), y: CGFloat(0), width: 30, height: 30))

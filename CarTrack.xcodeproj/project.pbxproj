@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		094A2E932962FF8900B4743F /* CTUserListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 094A2E922962FF8900B4743F /* CTUserListVC.swift */; };
 		0954D21C295EB8A800BE853B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0954D21B295EB8A800BE853B /* AppDelegate.swift */; };
 		0954D223295EB8A800BE853B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0954D221295EB8A800BE853B /* Main.storyboard */; };
 		0954D225295EB8AB00BE853B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0954D224295EB8AB00BE853B /* Assets.xcassets */; };
@@ -28,6 +29,10 @@
 		096A0C722962E49D005FA079 /* CTSingleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C712962E49D005FA079 /* CTSingleton.swift */; };
 		096A0C742962EBD8005FA079 /* ButtonExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C732962EBD7005FA079 /* ButtonExtension.swift */; };
 		096A0C762962F64F005FA079 /* UIApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096A0C752962F64F005FA079 /* UIApplication.swift */; };
+		0996724B296414B100DEBED8 /* CTUserListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996724A296414B000DEBED8 /* CTUserListCell.swift */; };
+		0996724E29641D6F00DEBED8 /* CTUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996724D29641D6E00DEBED8 /* CTUser.swift */; };
+		099672542964236900DEBED8 /* CTUserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099672532964236900DEBED8 /* CTUserDetailVC.swift */; };
+		09BD9BA82963FAB200C066E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09BD9BA72963FAB200C066E2 /* GoogleService-Info.plist */; };
 		09E54D5C29601C4100DD5637 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2129601C4100DD5637 /* ParameterEncoding.swift */; };
 		09E54D5D29601C4100DD5637 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */; };
 		09E54D5E29601C4100DD5637 /* JSONParameterEncoder.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2329601C4100DD5637 /* JSONParameterEncoder.swift */; };
@@ -64,6 +69,7 @@
 
 /* Begin PBXFileReference section */
 		0313F62F1FC474E7EBABF3E9 /* Pods-CarTrackTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CarTrackTests.release.xcconfig"; path = "Target Support Files/Pods-CarTrackTests/Pods-CarTrackTests.release.xcconfig"; sourceTree = "<group>"; };
+		094A2E922962FF8900B4743F /* CTUserListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserListVC.swift; sourceTree = "<group>"; };
 		0954D218295EB8A800BE853B /* CarTrack.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CarTrack.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0954D21B295EB8A800BE853B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0954D222295EB8A800BE853B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -89,6 +95,10 @@
 		096A0C712962E49D005FA079 /* CTSingleton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTSingleton.swift; sourceTree = "<group>"; };
 		096A0C732962EBD7005FA079 /* ButtonExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ButtonExtension.swift; sourceTree = "<group>"; };
 		096A0C752962F64F005FA079 /* UIApplication.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIApplication.swift; sourceTree = "<group>"; };
+		0996724A296414B000DEBED8 /* CTUserListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserListCell.swift; sourceTree = "<group>"; };
+		0996724D29641D6E00DEBED8 /* CTUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUser.swift; sourceTree = "<group>"; };
+		099672532964236900DEBED8 /* CTUserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserDetailVC.swift; sourceTree = "<group>"; };
+		09BD9BA72963FAB200C066E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09E54D2129601C4100DD5637 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
 		09E54D2329601C4100DD5637 /* JSONParameterEncoder.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JSONParameterEncoder.swift; sourceTree = "<group>"; };
@@ -139,6 +149,32 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		094A2E8F2962FF3600B4743F /* UserList */ = {
+			isa = PBXGroup;
+			children = (
+				094A2E902962FF4B00B4743F /* View */,
+				094A2E912962FF5F00B4743F /* ViewModel */,
+				0996724C29641D5600DEBED8 /* Model */,
+			);
+			path = UserList;
+			sourceTree = "<group>";
+		};
+		094A2E902962FF4B00B4743F /* View */ = {
+			isa = PBXGroup;
+			children = (
+				094A2E922962FF8900B4743F /* CTUserListVC.swift */,
+				0996724A296414B000DEBED8 /* CTUserListCell.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		094A2E912962FF5F00B4743F /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		0954D20F295EB8A700BE853B = {
 			isa = PBXGroup;
 			children = (
@@ -165,12 +201,15 @@
 			isa = PBXGroup;
 			children = (
 				0954D21B295EB8A800BE853B /* AppDelegate.swift */,
+				09BD9BA72963FAB200C066E2 /* GoogleService-Info.plist */,
 				096A0C692962C48D005FA079 /* Extension */,
 				09E54D9229601D5C00DD5637 /* NoNetworkView */,
 				09E54D1F29601C4100DD5637 /* Networking */,
 				0954D25A295EE1F500BE853B /* BaseClass */,
 				0954D221295EB8A800BE853B /* Main.storyboard */,
 				0954D24F295ED1E000BE853B /* Login */,
+				094A2E8F2962FF3600B4743F /* UserList */,
+				0996724F296422E900DEBED8 /* UserDetail */,
 				0954D224295EB8AB00BE853B /* Assets.xcassets */,
 				0954D226295EB8AB00BE853B /* LaunchScreen.storyboard */,
 				0954D229295EB8AB00BE853B /* Info.plist */,
@@ -241,6 +280,46 @@
 				096A0C6A2962C4E6005FA079 /* UIView+Extension.swift */,
 			);
 			path = Extension;
+			sourceTree = "<group>";
+		};
+		0996724C29641D5600DEBED8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				0996724D29641D6E00DEBED8 /* CTUser.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		0996724F296422E900DEBED8 /* UserDetail */ = {
+			isa = PBXGroup;
+			children = (
+				099672502964230600DEBED8 /* View */,
+				099672512964231600DEBED8 /* ViewModel */,
+				099672522964232D00DEBED8 /* Model */,
+			);
+			path = UserDetail;
+			sourceTree = "<group>";
+		};
+		099672502964230600DEBED8 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				099672532964236900DEBED8 /* CTUserDetailVC.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		099672512964231600DEBED8 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		099672522964232D00DEBED8 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 		09E54D1F29601C4100DD5637 /* Networking */ = {
@@ -454,6 +533,7 @@
 			files = (
 				0954D228295EB8AB00BE853B /* LaunchScreen.storyboard in Resources */,
 				0954D225295EB8AB00BE853B /* Assets.xcassets in Resources */,
+				09BD9BA82963FAB200C066E2 /* GoogleService-Info.plist in Resources */,
 				09E54D9529601D5C00DD5637 /* NoNetworkAvailableView.xib in Resources */,
 				0954D223295EB8A800BE853B /* Main.storyboard in Resources */,
 			);
@@ -592,15 +672,19 @@
 				0954D259295EE1B300BE853B /* CTBaseVM.swift in Sources */,
 				09E54D7729601C4100DD5637 /* HTTPMethod.swift in Sources */,
 				09E54D9629601D5C00DD5637 /* NoNetworkAvailableView.swift in Sources */,
+				0996724B296414B100DEBED8 /* CTUserListCell.swift in Sources */,
 				0954D24E295ED19700BE853B /* LoginVC.swift in Sources */,
 				0954D21C295EB8A800BE853B /* AppDelegate.swift in Sources */,
 				09E54D7829601C4100DD5637 /* Router.swift in Sources */,
 				096A0C622962A2CE005FA079 /* CTUserListProtocol.swift in Sources */,
 				096A0C702962DEE4005FA079 /* UITextFieldExtension.swift in Sources */,
 				096A0C6D2962D081005FA079 /* String.swift in Sources */,
+				0996724E29641D6F00DEBED8 /* CTUser.swift in Sources */,
 				096A0C722962E49D005FA079 /* CTSingleton.swift in Sources */,
 				09E54D5E29601C4100DD5637 /* JSONParameterEncoder.swift in Sources */,
+				099672542964236900DEBED8 /* CTUserDetailVC.swift in Sources */,
 				09E54D7629601C4100DD5637 /* HTTPTask.swift in Sources */,
+				094A2E932962FF8900B4743F /* CTUserListVC.swift in Sources */,
 				096A0C742962EBD8005FA079 /* ButtonExtension.swift in Sources */,
 				096A0C642962A3C8005FA079 /* CTUserListAPI.swift in Sources */,
 				096A0C6B2962C4E6005FA079 /* UIView+Extension.swift in Sources */,
