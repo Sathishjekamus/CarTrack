@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import FontAwesome_swift
 
 protocol CTUserListCellProtocol {
     func navigateToDetailUserView(_ index:Int)
@@ -13,21 +14,23 @@ protocol CTUserListCellProtocol {
 
 class CTUserListCell: UITableViewCell {
 
+    @IBOutlet weak var detailImageView: UIImageView!
     @IBOutlet weak var detailViewBtn: UIButton!
-    @IBOutlet weak var emailLabel: UILabel!
-    @IBOutlet weak var userNameLabel: UILabel!
-    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var emailTxtField: UITextField!
+    @IBOutlet weak var userNameTxtField: UITextField!
+    @IBOutlet weak var nameTxtField: UITextField!
     var delegate:CTUserListCellProtocol?
     override func awakeFromNib() {
         super.awakeFromNib()
-        // Initialization code
+        self.detailImageView.image = UIImage.fontAwesomeIcon(name: .caretRight, style: .solid, textColor: .darkGray, size: CGSize(width: 20, height: 20))
+      
     }
     
     func loadCell(_ user:CTUser?, index:Int){
         self.detailViewBtn.tag = index
-        self.nameLabel.text = user?.name ?? ""
-        self.userNameLabel.text = user?.userName ?? ""
-        self.emailLabel.text = user?.email ?? ""
+        self.nameTxtField.text = "Name: \(user?.name ?? "")"
+        self.userNameTxtField.text = "User Name: \(user?.userName ?? "")"
+        self.emailTxtField.text = "Email: \(user?.email ?? "")"
     }
 
     @IBAction func navigateToUserDetailScreen(_ sender: Any) {
@@ -35,4 +38,7 @@ class CTUserListCell: UITableViewCell {
         self.delegate?.navigateToDetailUserView(btn.tag)
     }
     
+    @IBAction func emailBtnTapped(_ sender: Any) {
+        
+    }
 }

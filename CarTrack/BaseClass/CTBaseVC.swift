@@ -179,3 +179,9 @@ class CTBaseVC: UIViewController, CTBaseVCProtocol {
         }
     
 }
+
+extension CTBaseVC:UITextFieldDelegate {
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        return textField.resignFirstResponder()
+    }
+}

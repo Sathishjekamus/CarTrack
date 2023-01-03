@@ -61,7 +61,6 @@ class LoginVC: CTBaseVC {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Login"
         self.checkWhetherLoggedInAlready()
     }
     

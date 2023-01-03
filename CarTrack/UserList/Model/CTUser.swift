@@ -7,15 +7,24 @@
 
 import Foundation
 import ObjectMapper
+
+struct CTUserList:Mappable {
+    var users = [CTUser]()
+    init?(map: ObjectMapper.Map) {}
+    init(){}
+    mutating func mapping(map: ObjectMapper.Map) {
+        self.users <- map["result"]
+    }
+}
 struct CTUser:Mappable {
     var id:Int?
     var name:String?
     var userName:String?
     var email:String?
-    var address:Address?
+    var address = Address()
     var phone:String?
     var website:String?
-    var company: Company?
+    var company = Company()
     
     init?(map: ObjectMapper.Map) {}
     init(){}

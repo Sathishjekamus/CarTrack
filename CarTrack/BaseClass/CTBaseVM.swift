@@ -15,19 +15,19 @@ class CTBaseVM {
     
     var manager = NetworkManager()
     
-    func noNetworkError(){}
+    func noNetworkError(_ error:String){}
     
-    func modelDecodableError(){}
+    func modelDecodableError(_ error:String){}
     
-    func noDataError(){}
+    func noDataError(_ error:String){}
     
-    func networkFailureError(error:String){}
+    func networkFailureError(_ error:String){}
     
     
     func convertJsonResponseIntoJsonModel<T:Mappable>(with modelObj:T, netWorkObj:NetworkObject, completion:((T?)->Void)?) {
         
         if netWorkObj.error != nil {
-            self.noNetworkError()
+            self.noNetworkError("Network not available!")
         }else{
                    
         if let response = netWorkObj.response as? HTTPURLResponse {
@@ -36,22 +36,23 @@ class CTBaseVM {
                  switch result {
                  case .success:
                     guard let responseData = netWorkObj.data else {
-                        self.noDataError()
+                        self.noDataError("No data available!")
                      return
                    }
                    
                     do {
                          let jsonObj = try JSONSerialization.jsonObject(with: responseData, options: .mutableContainers)
-                        let modelObj = Mapper<T>().map(JSONObject: jsonObj)
+                        let result = ["result":jsonObj]
+                        let modelObj = Mapper<T>().map(JSONObject: result)
                          print(jsonObj)
                         completion?(modelObj)
                   }catch {
                       print(error)
-                    self.modelDecodableError()
+                    self.modelDecodableError("Decodable error!")
                     }
             
                   case .failure(let networkFailureError):
-                    self.networkFailureError(error: networkFailureError)
+                     self.networkFailureError(networkFailureError)
                      
                  }
              }
