@@ -6,6 +6,8 @@
 //
 
 import UIKit
+import MessageUI
+
 
 protocol CTUserListViewDelegate {
     func didStartLoadingContent()
@@ -74,6 +76,17 @@ extension CTUserListVC:CTUserListCellProtocol {
         self.navigationController?.pushViewController(vc, animated: true)
     }
     
+    func navigateToEmailWindow(_ index:Int) {
+        if MFMailComposeViewController.canSendMail() {
+            let mail = MFMailComposeViewController()
+            mail.mailComposeDelegate = self
+            let user = self.users?[index]
+            let email = user?.email
+            mail.setToRecipients([email ?? "sathishkalimuthan@gmail.com"])
+            present(mail, animated: true)
+        }
+    }
+    
     
 }
 
@@ -95,4 +108,10 @@ extension CTUserListVC: CTUserListViewDelegate {
     }
     
     
+}
+
+extension CTUserListVC:MFMailComposeViewControllerDelegate {
+    func mailComposeController(_ controller: MFMailComposeViewController, didFinishWith result: MFMailComposeResult, error: Error?) {
+        controller.dismiss(animated: true, completion: nil)
+    }
 }

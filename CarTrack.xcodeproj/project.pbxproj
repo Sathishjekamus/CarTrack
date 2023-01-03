@@ -34,6 +34,7 @@
 		099672542964236900DEBED8 /* CTUserDetailVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099672532964236900DEBED8 /* CTUserDetailVC.swift */; };
 		099672562964264B00DEBED8 /* CTUserListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099672552964264B00DEBED8 /* CTUserListVM.swift */; };
 		099672582964383F00DEBED8 /* PaddingLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 099672572964383F00DEBED8 /* PaddingLabel.swift */; };
+		0996725B2964599500DEBED8 /* MapVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0996725A2964599500DEBED8 /* MapVC.swift */; };
 		09BD9BA82963FAB200C066E2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 09BD9BA72963FAB200C066E2 /* GoogleService-Info.plist */; };
 		09E54D5C29601C4100DD5637 /* ParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2129601C4100DD5637 /* ParameterEncoding.swift */; };
 		09E54D5D29601C4100DD5637 /* URLParameterEncoding.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */; };
@@ -102,6 +103,7 @@
 		099672532964236900DEBED8 /* CTUserDetailVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserDetailVC.swift; sourceTree = "<group>"; };
 		099672552964264B00DEBED8 /* CTUserListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CTUserListVM.swift; sourceTree = "<group>"; };
 		099672572964383F00DEBED8 /* PaddingLabel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PaddingLabel.swift; sourceTree = "<group>"; };
+		0996725A2964599500DEBED8 /* MapVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapVC.swift; sourceTree = "<group>"; };
 		09BD9BA72963FAB200C066E2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		09E54D2129601C4100DD5637 /* ParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ParameterEncoding.swift; sourceTree = "<group>"; };
 		09E54D2229601C4100DD5637 /* URLParameterEncoding.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = URLParameterEncoding.swift; sourceTree = "<group>"; };
@@ -210,6 +212,7 @@
 				096A0C692962C48D005FA079 /* Extension */,
 				09E54D9229601D5C00DD5637 /* NoNetworkView */,
 				09E54D1F29601C4100DD5637 /* Networking */,
+				099672592964597400DEBED8 /* MapView */,
 				0954D25A295EE1F500BE853B /* BaseClass */,
 				0954D221295EB8A800BE853B /* Main.storyboard */,
 				0954D24F295ED1E000BE853B /* Login */,
@@ -326,6 +329,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		099672592964597400DEBED8 /* MapView */ = {
+			isa = PBXGroup;
+			children = (
+				0996725A2964599500DEBED8 /* MapVC.swift */,
+			);
+			path = MapView;
 			sourceTree = "<group>";
 		};
 		09E54D1F29601C4100DD5637 /* Networking */ = {
@@ -685,6 +696,7 @@
 				09E54D7829601C4100DD5637 /* Router.swift in Sources */,
 				096A0C622962A2CE005FA079 /* CTUserListProtocol.swift in Sources */,
 				096A0C702962DEE4005FA079 /* UITextFieldExtension.swift in Sources */,
+				0996725B2964599500DEBED8 /* MapVC.swift in Sources */,
 				096A0C6D2962D081005FA079 /* String.swift in Sources */,
 				0996724E29641D6F00DEBED8 /* CTUser.swift in Sources */,
 				096A0C722962E49D005FA079 /* CTSingleton.swift in Sources */,

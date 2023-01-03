@@ -74,7 +74,9 @@ class CTUserDetailVC: CTBaseVC {
     }
 
     @IBAction func locationBtnClicked(_ sender: Any) {
-        
+        let vc = self.storyboard?.instantiateViewController(withIdentifier: "MapVC") as! MapVC
+        vc.user = self.user
+        self.navigationController?.pushViewController(vc, animated: true)
     }
     
     @IBAction func websiteBtnClicked(_ sender: Any) {

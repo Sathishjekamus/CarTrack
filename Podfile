@@ -15,7 +15,9 @@ target 'CarTrack' do
  pod 'Firebase/Core'
  pod 'Firebase/Auth'
  pod 'FBSDKLoginKit'
-
+ pod 'GoogleMaps'
+ 
+ 
   target 'CarTrackTests' do
     inherit! :search_paths
     # Pods for testing
