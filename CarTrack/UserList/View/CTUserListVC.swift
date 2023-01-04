@@ -21,6 +21,7 @@ class CTUserListVC: CTBaseVC {
     @IBOutlet weak var titleLabel: UILabel!
     @IBOutlet weak var backBtn: UIButton!
     @IBOutlet weak var backImageView: UIImageView!
+    @IBOutlet weak var topView: UIView!
     var users:[CTUser]?
     var vm:CTUserListVMProtocol?
     
@@ -35,6 +36,7 @@ class CTUserListVC: CTBaseVC {
     }
 
     override func initializeViews() {
+        self.topView.isHidden = true
         self.userListTableView.isHidden = true
         self.backImageView.image = UIImage.fontAwesomeIcon(name: .chevronLeft, style: .solid, textColor: .white, size: CGSize(width: 20, height: 20))
         self.titleLabel.text = "Users List"
@@ -103,6 +105,7 @@ extension CTUserListVC: CTUserListViewDelegate {
     func didLoadedUsers(_ users: [CTUser]) {
         self.didFinishLoading()
         self.users = users
+        self.topView.isHidden = false
         self.userListTableView.isHidden = false
         self.userListTableView.reloadData()
     }
